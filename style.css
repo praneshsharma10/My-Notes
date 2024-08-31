@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100vw;
+    padding: 23px;
+    background-color: #ffffff;
+}
+
+.header-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #ffffff;
+    text-align: center;
+    color: #070707;
+}
+
+.header-title h1 {
+    font-size: 30px;
+    color: #333333;
+    margin-top: 10px;
+}
+
+#input-box {
+    border: 1px solid #ccc;
+    padding: 23px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+}
+
+#addTitle {
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    margin-top: 6px;
+    color: #333333;
+    padding: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+#notes {
+    padding: 23px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.note {
+    width: 100%;
+    color: #333333;
+    background-color: #fafafa;
+    overflow-wrap: break-word;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.note .title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.note .text {
+    margin-top: 10px; 
+    margin-bottom: 10px;
+    color: #333333;
+}
+
+
+.deleteNote{
+    position: absolute;
+    top: 10px;
+    right:20px;
+ 
+    background: transparent;
+    border: none;
+    color: grey;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.editNote {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+   
+    background: transparent;
+    border: none;
+    color: grey;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    
+}
+
+
+.deleteNote {
+    right: 1px;
+}
+
+.editNote {
+    right: 80px;
+}
+
+.deleteNote:hover, .editNote:hover {
+    color: rgb(255, 253, 253);
+}
+
+
+
+#labelColor {
+    display: flex;
+    justify-content: flex-end; 
+    margin-top: 15px;
+    gap: 10px; 
+}
+.color-circle {
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.color-circle:hover {
+    border-color: #007bff;
+}
+
+.color-circle.skyblue {
+    background-color: skyblue;
+}
+
+.color-circle.black {
+    background-color: black;
+}
+
+.color-circle.green {
+    background-color: green;
+}
+
+.color-circle.selected {
+    border-color: #007bff;
+}
+
+.note .selected-color-circle {
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: inline-block;
+}
