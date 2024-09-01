@@ -106,48 +106,46 @@ button:hover {
     color: #333333;
 }
 
-
-.deleteNote{
-    position: absolute;
-    top: 10px;
-    right:20px;
- 
-    background: transparent;
-    border: none;
-    color: grey;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 16px;
+.note .date {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
 }
 
-.editNote {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-   
-    background: transparent;
-    border: none;
-    color: grey;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 16px;
-    
+.note-date {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
 }
 
 
 .deleteNote {
-    right: 1px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    color: grey;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
 .editNote {
+    position: absolute;
+    top: 10px;
     right: 80px;
+    background: transparent;
+    border: none;
+    color: grey;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
 .deleteNote:hover, .editNote:hover {
     color: rgb(255, 253, 253);
 }
-
-
 
 #labelColor {
     display: flex;
@@ -155,6 +153,7 @@ button:hover {
     margin-top: 15px;
     gap: 10px; 
 }
+
 .color-circle {
     width: 30px;
     height: 30px;

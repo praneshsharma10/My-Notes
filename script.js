@@ -4,6 +4,8 @@ const addNoteButton = document.getElementById('addNote');
 const notesDiv = document.getElementById('notes');
 const labelColorCircles = document.querySelectorAll('.color-circle');
 
+const addDate = document.getElementById('addDate');
+
 let selectedLabelColor = '';
 
 // handle note addition
@@ -23,11 +25,13 @@ function addNotes() {
     const noteObj = {
         title: addTitle.value,
         text: addText.value,
-        label: selectedLabelColor
+        label: selectedLabelColor,
+        date: addDate.value // Add date here
     };
 
     addTitle.value = '';
     addText.value = '';
+    addDate.value = ''; // Clear date input
     selectedLabelColor = '';
     labelColorCircles.forEach(circle => circle.classList.remove('selected'));
 
@@ -35,6 +39,7 @@ function addNotes() {
     localStorage.setItem('notes', JSON.stringify(notes));
     showNotes();
 }
+
 
 // to display notes
 function showNotes() {
@@ -53,10 +58,12 @@ function showNotes() {
             <span class="title"><strong>${notes[i].title === "" ? 'Note' : notes[i].title}</strong></span>
             <div class="text">${notes[i].text}</div>
             ${notes[i].label ? `<div class="selected-color-circle" style="background-color: ${notes[i].label};"></div>` : ''}
+            ${notes[i].date ? `<div class="note-date">Date: ${notes[i].date}</div>` : ''}
         </div>`;
     }
     notesDiv.innerHTML = notesHTML;
 }
+
 
 // to handle note deletion
 function deleteNote(ind) {
