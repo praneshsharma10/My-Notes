@@ -10,20 +10,16 @@ body {
     color: #333;
 }
 
-.container {
+.main-container {
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
-    width: 100vw;
-    padding: 23px;
-    background-color: #ffffff;
 }
 
 .header-title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
     padding: 10px;
     background-color: #ffffff;
-    text-align: center;
     color: #070707;
 }
 
@@ -33,12 +29,32 @@ body {
     margin-top: 10px;
 }
 
+.container {
+    display: flex;
+    flex: 1;
+    width: 100%;
+}
+
+.left-panel {
+    width: 30%;
+    border-right: 1px solid #ccc;
+    padding: 20px;
+    background-color: #fafafa;
+    overflow-y: auto;
+}
+
+.right-panel {
+    width: 70%;
+    padding: 20px;
+    background-color: #ffffff;
+    overflow-y: auto;
+}
+
 #input-box {
     border: 1px solid #ccc;
     padding: 23px;
     border-radius: 8px;
     background-color: #f9f9f9;
-    margin-bottom: 20px;
 }
 
 #addTitle {
@@ -75,7 +91,6 @@ button:hover {
 }
 
 #notes {
-    padding: 23px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -101,57 +116,39 @@ button:hover {
 }
 
 .note .text {
-    margin-top: 10px; 
-    margin-bottom: 10px;
+    font-size: 16px;
+    margin-top: 10px;
     color: #333333;
 }
 
-.note .date {
-    font-size: 14px;
-    color: #888;
-    margin-bottom: 10px;
-}
-
-.note-date {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #666;
-}
-
-
-.deleteNote {
+.deleteNote, .editNote {
     position: absolute;
     top: 10px;
-    right: 20px;
     background: transparent;
     border: none;
     color: grey;
     padding: 10px;
     cursor: pointer;
     font-size: 16px;
+}
+
+.deleteNote {
+    right: 10px;
 }
 
 .editNote {
-    position: absolute;
-    top: 10px;
     right: 80px;
-    background: transparent;
-    border: none;
-    color: grey;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 16px;
 }
 
 .deleteNote:hover, .editNote:hover {
-    color: rgb(255, 253, 253);
+    color: #ff3b3b;
 }
 
 #labelColor {
     display: flex;
-    justify-content: flex-end; 
+    justify-content: flex-end;
     margin-top: 15px;
-    gap: 10px; 
+    gap: 10px;
 }
 
 .color-circle {
@@ -187,7 +184,6 @@ button:hover {
 .note .selected-color-circle {
     width: 20px;
     height: 20px;
-    padding: 5px;
     border-radius: 50%;
     margin-right: 10px;
     display: inline-block;

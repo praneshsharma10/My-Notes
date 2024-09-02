@@ -5,26 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>My Notes App</title> 
+    <title>My Notes App</title>
 </head>
 <body>
-    <header class="header-title">
-        <h1>My Notes</h1>
-    </header>
-    <div class="container">
-        <div id="input-box">
-            <input type="text" id="addTitle" placeholder="Title">
-            <textarea id="addText" cols="30" rows="10" placeholder="Take a note.."></textarea>
-            <input type="date" id="addDate">
+    <div class="main-container">
+       
+        
+        <header class="header-title">
 
-            <div id="labelColor">
-                <div class="color-circle skyblue" data-color="skyblue"></div>
-                <div class="color-circle black" data-color="black"></div>
-                <div class="color-circle green" data-color="green"></div>
+            <h1>My Notes</h1>
+        </header>
+        <div class="container">
+            <div class="left-panel">
+                <div id="notes"></div>
             </div>
-            <button id="addNote">Add</button>
+            <div class="right-panel">
+                <div id="input-box">
+                    <input type="text" id="addTitle" placeholder="Title">
+                    <textarea id="addText" cols="30" rows="10" placeholder="Take a note.."></textarea>
+                    <div id="labelColor">
+                        <div class="color-circle skyblue" data-color="skyblue"></div>
+                        <div class="color-circle black" data-color="black"></div>
+                        <div class="color-circle green" data-color="green"></div>
+                    </div>
+                    <button id="addNote">Add</button>
+                </div>
+            </div>
         </div>
-        <div id="notes"></div>
     </div>
     <script src="script.js"></script>
 </body>
