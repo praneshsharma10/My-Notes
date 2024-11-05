@@ -188,3 +188,95 @@ button:hover {
     margin-right: 10px;
     display: inline-block;
 }
+
+
+
+/* Dark Mode Styles */
+body.dark-mode .header-title {
+    background-color: #2c2c2c;
+    color: #ffffff; 
+}
+
+/* making title white  */
+body.dark-mode .header-title h1 {
+    color: #ffffff; 
+}
+
+body.dark-mode .container {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .left-panel,
+body.dark-mode .right-panel {
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+    border-right: 1px solid #d4cece;
+}
+
+body.dark-mode #input-box {
+    background-color: #3a3a3a;
+    border: 1px solid #444;
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+    color: #e0e0e0;
+}
+
+body.dark-mode button {
+    background: #0056b3;
+    color: white;
+}
+
+body.dark-mode button:hover {
+    background: #003d7a;
+}
+
+
+
+body.dark-mode .note {
+    background-color: #2e2e2e;
+    border-color: #ebe2e2;
+}
+
+body.dark-mode .note .title {
+    color: #ffffff; 
+}
+
+body.dark-mode .selected-color-circle {
+    border-color: #4ea8de;
+}
+
+
+body.dark-mode .editNote,
+body.dark-mode .deleteNote {
+    color: #ffffff; 
+}
+
+body.dark-mode .editNote:hover,
+body.dark-mode .deleteNote:hover {
+    color: #ffeb3b; 
+}
+
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+/* Dark Mode  Button */
+#darkModeToggle {
+    background: #007bff;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#darkModeToggle:hover {
+    background: #0056b3;
+}
