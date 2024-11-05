@@ -113,6 +113,24 @@ document.addEventListener('keydown', function(e) {
 //         addNotes();
 //     }
 // });
+// dark mode toggle button 
+const darkModeToggle = document.getElementById('darkModeToggle');
+
+darkModeToggle.addEventListener('click', function() {
+    document.body.classList.toggle('dark-mode');
+    // Save mode in localStorage to remember user's preference
+    if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+    } else {
+        localStorage.setItem('theme', 'light');
+    }
+});
+
+// Check saved mode on page load
+if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-mode');
+}
+
 
 
 
